@@ -22,9 +22,9 @@ app.use((req,res,next)=>{
   next()
 })
 
-app.use((req,res,next)=>{
-  res.render('maintenance.hbs')
-})//don't call nex - stops app, but doesn't work on statu=ic
+// app.use((req,res,next)=>{
+//   res.render('maintenance.hbs')
+// })//don't call nex - stops app, but doesn't work on statu=ic
 app.use(express.static(__dirname + '/public'))
 
 hbs.registerHelper('getCurrentYear', () => {
