@@ -52,6 +52,13 @@ app.get('/about', (req,res) =>{
   })
 })
 
+app.get('/projects', (req,res) =>{
+  // res.send('about page')
+  res.render('projects.hbs',{
+    pageTitle:'Projects page'
+  })
+})
+
 app.get('/bad',(req,res) =>{
   res.send({
     errorMessage:'error sending data'
